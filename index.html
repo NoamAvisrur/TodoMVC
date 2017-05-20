@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoMVC</title>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <link rel="icon" href="img/todomvc.png">
+</head>
+<body>
+    <div id="container">
+        <h1>todos</h1>
+	<div id="top_wrapper">
+            <header>
+                <div id="select_all"><input type="checkbox" class="check_all_list"></div>
+                <form>
+	            <input type="text" placeholder="What needs to be done?" autofocus>
+	        </form>
+            </header>
+	    <ul id="tasks_container"></ul>
+            <div class="bottom_list">
+                <div class="items_counter">
+                    <span><span id=counter></span> items left</span>
+                </div>
+                <button id=all class="active_mode">All</button>
+                <button id="active">Actice</button>
+                <button id="complete">Completed</button>
+                <span class="clear_completed undisplay">Clear Completed</span>
+            </div>
+	</div>
+    </div>   
+    <footer>
+        <small>Created by Noam Avisrur</small>
+        <small>Part of <a href="http://todomvc.com/"> TodoMVC</a></small>
+    </footer>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="model.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
