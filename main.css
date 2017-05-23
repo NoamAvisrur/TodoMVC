@@ -31,7 +31,7 @@ header{
     width: 65px;
 }
 .check_all_list {
-    margin: 0 auto;
+    margin-left: 22px;
     display: block;
     margin-top: 1rem;
     transform: rotate(90deg);
@@ -39,10 +39,9 @@ header{
     outline: none;
 }
 .check_all_list:before{
-    content: '?';
+    content: '\232A';
     font-size: 22px;
     color: #e6e6e6;
-    padding: 10px 27px 10px 27px;
 }
 .check_all_list:checked:before{
     color: #737373;
@@ -111,7 +110,8 @@ form input {
     border: none;
     position: absolute;
     right: 10px;
-    top: 20px;
+    top: 15px;
+    font-size: 25px;
 }
 .delete:hover{
     opacity: 1;

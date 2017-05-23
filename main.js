@@ -12,7 +12,7 @@ $('#all').click(function(e){
      $('#active, #complete').removeClass('active_mode');
      $(".task").css("display", "block");
      $( "checkbox" ).each(function(i, val){
-         $(this).chenge(markAsCompleted);
+         $(this).change(markAsCompleted);
      });
 });
 
@@ -22,7 +22,7 @@ $('#active').click(function(e){
      $(".task").filter(".uncompleted").css("display", "block");
      $(".task").filter(".completed").css("display", "none");
      $( "checkbox" ).each(function(i, val){
-         $(this).chenge(markAsCompleted);
+         $(this).change(markAsCompleted);
      });
 });
 
@@ -32,7 +32,7 @@ $('#complete').click(function(){
      $(".task").filter(".completed").css("display", "block");
      $(".task").filter(".uncompleted").css("display", "none");
      $( "checkbox" ).each(function(i, val){
-         $(this).chenge(markAsCompleted);
+         $(this).change(markAsCompleted);
      });
 });
 
@@ -54,7 +54,7 @@ function buildTask(text) {
 		class: "text"
 	}).appendTo(task);
 	$('<button>', {
-		text: '?', 
+		text: '\u00d7', 
 		class: "delete", 
 		click: deleteTask,
 	}).appendTo(task);
@@ -124,7 +124,7 @@ function setBottomAndSelectAll(){
 }
 
 function setClearCompleted (){
-    if ($(".task").filter(".completed").length > 0){
+    if($(".task.completed").length > 0){
         $('.clear_completed').removeClass('undisplay');
     }else{
         $('.clear_completed').addClass('undisplay');
